@@ -2,11 +2,6 @@
 """
 Fase 2: Base de conocimiento.
 Contiene los hechos (set compartido), las reglas SI-ENTONCES y los textos de salida.
-Si quieres agregar o cambiar una regla, este es el único archivo que debes tocar
-(y, si agregas una recomendación nueva, escribe también su texto y su fuente).
-
-Ni las reglas ni los hechos llevan fuente. Las referencias bibliográficas se muestran
-únicamente junto a cada RECOMENDACIÓN final (ver FUENTES_REC más abajo).
 """
 
 # ============================================================
@@ -22,11 +17,11 @@ hechos = set()   # Se llena con las respuestas del usuario y con la inferencia
 
 # Cada regla es una tupla de 3 elementos:
 #     (id, conclusion, condiciones)
-# Es el mismo esquema "conclusion, condiciones" de tu código,
+# Es el mismo esquema "conclusion, condiciones" 
 # pero con un id para poder identificar la regla.
 #
 # Las reglas se pueden ENCADENAR: la conclusión de una regla puede ser
-# la condición de otra (por ejemplo R1 -> R5).
+# la condición de otra.
 
 REGLAS = [
     # --- Preferencias (VARK) ---
@@ -43,7 +38,7 @@ REGLAS = [
     ("R9", "rec_notas_escritas", ("preferencia_lectoescritura",)),
     ("R10", "rec_combinar_estrategias", ("perfil_multimodal",)),
 
-    # --- Técnicas con evidencia (no dependen del estilo) ---
+    # --- técnicas con evidencia (no dependen del estilo) ---
     ("R11", "rec_pruebas_de_practica", ("examen_proximo",)),
     ("R12", "rec_estudio_distribuido", ("varios_dias",)),
     ("R13", "rec_evitar_solo_releer", ("habito_releer_subrayar",)),
@@ -123,7 +118,6 @@ NOMBRES_PREFERENCIA = {
 }
 
 # Cómo se llama cada preferencia dentro de HECHOS_DOMINIO (hechos F2 a F5),
-# para poder consultar con buscar("se_relaciona_con", sujeto)
 SUJETO_VARK = {
     "preferencia_visual": "visual",
     "preferencia_auditiva": "auditiva",

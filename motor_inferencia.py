@@ -55,13 +55,6 @@ def inferir(sujeto=SUJETO, mostrar=True):
     Recorre las reglas una y otra vez hasta que ya no se pueda
     deducir nada nuevo. Esto permite encadenar reglas
     (la conclusión de una puede activar a otra).
-
-    Es la misma idea de tu código:
-        all((condicion, animal) in hechos for condicion in condiciones)
-    pero con dos mejoras:
-        1) La conclusión se AGREGA a los hechos (tu código solo la imprimía).
-        2) Se repite hasta llegar a un punto fijo.
-
     Devuelve la lista de reglas disparadas: [(id, conclusion, condiciones)]
     """
     disparadas = []

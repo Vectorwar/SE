@@ -81,7 +81,6 @@ def objetos_de(hecho):
     return objeto if isinstance(objeto, tuple) else (objeto,)
 
 
-# Prueba de funcionamiento (solo se ejecuta con:  python hechos.py)
 
 if __name__ == "__main__":
     # Ejemplos de hechos de usuario, solo para pruebas

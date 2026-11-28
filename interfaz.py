@@ -4,8 +4,6 @@ Interfaz gráfica (tkinter) del sistema experto.
 Reutiliza el cuestionario (cuestionario.py) y el motor de inferencia a través de
 salida.evaluar(), así la lógica no se duplica: solo cambia la forma de pedir datos
 y mostrar el resultado.
-
-Se abre desde main.py (python main.py) o directamente con:  python interfaz.py
 """
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -23,8 +21,7 @@ class App(tk.Tk):
 
         self.indice = 0          # pregunta actual
         self.respuestas = []     # número de la opción elegida en cada pregunta (0, 1, 2...)
-        self.opcion = tk.IntVar(value=-1)   # opción seleccionada (radio buttons)
-
+        self.opcion = tk.IntVar(value=-1)   # opción seleccionada 
         # --- Widgets fijos ---
         self.lbl_progreso = ttk.Label(self, font=("Arial", 10))
         self.lbl_progreso.pack(pady=(15, 5))

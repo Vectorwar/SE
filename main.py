@@ -3,14 +3,6 @@
 Sistema experto: recomendador de técnicas de estudio
 Instituto Tecnológico de Ensenada - Programación Lógica
 
-PUNTO DE ENTRADA DEL PROGRAMA
-
-    python main.py             -> abre la interfaz gráfica (tkinter)
-    python main.py --consola   -> usa la versión de texto en la terminal
-
-Si tkinter no está disponible (o no se encuentra interfaz.py),
-el programa avisa y continúa automáticamente en modo consola.
-
 Estructura del proyecto:
     cuestionario.py       -> preguntas y opciones
     base_conocimiento.py  -> hechos, reglas y textos
